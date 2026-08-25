@@ -1,0 +1,32 @@
+:root {
+  /* Colors */
+  --color-background: #0d0f13;
+  --color-surface: #151922;
+  --color-surface-hover: #1b202b;
+
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #8b949e;
+
+  --color-accent: #58a6ff;
+  --color-accent-secondary: #a371f7;
+
+  --color-border: #30363d;
+
+  /* Typography */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Layout */
+  --container-width: 1200px;
+  --section-padding: 120px;
+
+  /* Effects */
+  --transition-fast: 180ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+}
