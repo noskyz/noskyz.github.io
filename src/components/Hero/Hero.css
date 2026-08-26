@@ -110,7 +110,7 @@
 .hero__subtitle {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 28px;
 
   margin-top: 22px;
 
@@ -122,10 +122,22 @@
   line-height: 1.15;
 }
 
-.hero__subtitle span {
+.hero__role {
+  display: block;
+
+  max-width: 260px;
+}
+
+.hero__ampersand {
+  flex-shrink: 0;
+
   color: var(--color-text-secondary);
+
   font-family: var(--font-mono);
   font-size: 0.75em;
+  line-height: 1;
+
+  transform: translate(-40px, 2px);
 }
 
 .hero__description {
@@ -419,6 +431,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
+  }
+
+  .hero__ampersand {
+    transform: none;
   }
 
   .hero__description {

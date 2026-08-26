@@ -6,6 +6,7 @@ import App from "./App";
 
 import "./styles/global.css";
 import "./styles/animations.css";
+import "./styles/project-details.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

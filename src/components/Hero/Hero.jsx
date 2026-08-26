@@ -21,9 +21,17 @@ function Hero() {
           </h1>
 
           <h2 className="hero__subtitle">
-            Software Engineer
-            <span>&</span>
-            Game Developer
+            <span className="hero__role">
+              Software Engineer
+            </span>
+
+            <span className="hero__ampersand">
+              &
+            </span>
+
+            <span className="hero__role">
+              Game Developer
+            </span>
           </h2>
 
           <p className="hero__description">

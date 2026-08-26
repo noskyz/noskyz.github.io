@@ -1,12 +1,12 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
 
   width: 100%;
 
-  background: rgba(13, 15, 19, 0.72);
+  background: rgba(13, 15, 19, 0.82);
   border-bottom: 1px solid rgba(48, 54, 61, 0.5);
 
   backdrop-filter: blur(16px);
@@ -24,6 +24,8 @@
   gap: 32px;
 }
 
+/* Logo */
+
 .navbar__logo {
   display: inline-flex;
   align-items: center;
@@ -35,6 +37,8 @@
   font-size: 1.15rem;
   font-weight: 600;
 
+  text-decoration: none;
+
   transition: color var(--transition-fast);
 }
 
@@ -44,34 +48,49 @@
 
 .navbar__logo-mark {
   color: var(--color-accent);
+
   font-family: var(--font-mono);
   font-size: 0.9rem;
 }
+
+/* Navigation */
 
 .navbar__links {
   display: flex;
   align-items: center;
   gap: 36px;
+
   margin-left: auto;
 }
 
-.navbar__links a {
+.navbar__links button {
   position: relative;
+
+  padding: 0;
+  border: 0;
+
+  background: transparent;
 
   color: var(--color-text-secondary);
 
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: 500;
+
+  cursor: pointer;
+
+  text-decoration: none;
 
   transition:
     color var(--transition-fast),
     transform var(--transition-fast);
 }
 
-.navbar__links a::after {
+.navbar__links button::after {
   content: "";
 
   position: absolute;
+
   left: 0;
   bottom: -7px;
 
@@ -83,13 +102,15 @@
   transition: width var(--transition-normal);
 }
 
-.navbar__links a:hover {
+.navbar__links button:hover {
   color: var(--color-text-primary);
 }
 
-.navbar__links a:hover::after {
+.navbar__links button:hover::after {
   width: 100%;
 }
+
+/* Actions */
 
 .navbar__actions {
   display: flex;
@@ -104,6 +125,8 @@
   display: grid;
   place-items: center;
 
+  padding: 0;
+
   border: 1px solid transparent;
   border-radius: var(--radius-small);
 
@@ -113,6 +136,10 @@
   font-size: 0.72rem;
   font-weight: 500;
 
+  background: transparent;
+
+  cursor: pointer;
+
   transition:
     color var(--transition-fast),
     background-color var(--transition-fast),
@@ -121,13 +148,12 @@
 
 .navbar__control:hover {
   color: var(--color-text-primary);
+
   background: var(--color-surface);
   border-color: var(--color-border);
 }
 
-.navbar__theme {
-  font-size: 1.05rem;
-}
+/* Mobile menu */
 
 .navbar__menu {
   display: none;
@@ -138,21 +164,31 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   gap: 5px;
+
+  padding: 0;
 
   border: 1px solid var(--color-border);
   border-radius: var(--radius-small);
+
+  background: transparent;
+
+  cursor: pointer;
 }
 
 .navbar__menu span {
   width: 17px;
   height: 1px;
+
   background: var(--color-text-primary);
 
   transition:
     transform var(--transition-fast),
     opacity var(--transition-fast);
 }
+
+/* Responsive */
 
 @media (max-width: 768px) {
   .navbar__container {
@@ -161,20 +197,25 @@
 
   .navbar__links {
     position: absolute;
+
     top: calc(100% + 1px);
     left: 0;
 
     width: 100%;
+
     padding: 20px;
 
     flex-direction: column;
     align-items: flex-start;
+
     gap: 20px;
 
     background: rgba(13, 15, 19, 0.96);
+
     border-bottom: 1px solid var(--color-border);
 
     transform: translateY(-10px);
+
     opacity: 0;
     visibility: hidden;
 
@@ -186,6 +227,7 @@
 
   .navbar__links--open {
     transform: translateY(0);
+
     opacity: 1;
     visibility: visible;
   }
@@ -194,7 +236,7 @@
     display: flex;
   }
 
-  .navbar__links a {
+  .navbar__links button {
     font-size: 1rem;
   }
 }
