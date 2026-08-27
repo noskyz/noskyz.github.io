@@ -1,0 +1,510 @@
+.skycat-page {
+    padding-top: 76px;
+
+    background: var(--color-background);
+}
+
+.skycat__container {
+    width: min(100% - 40px, var(--container-width));
+    margin-inline: auto;
+}
+
+.skycat__eyebrow {
+    display: inline-block;
+
+    color: var(--color-accent);
+
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+/* Hero */
+
+.skycat-hero {
+    padding: 120px 0 130px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    text-align: center;
+}
+
+.skycat-hero__logo {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 38px;
+}
+
+.skycat-hero__logo-placeholder {
+    width: 120px;
+    height: 120px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+
+    color: var(--color-text-primary);
+
+    font-family: var(--font-mono);
+    font-size: 17px;
+    letter-spacing: 2px;
+
+    background: var(--color-surface);
+
+    box-shadow:
+        0 0 35px rgba(88, 166, 255, 0.06);
+}
+
+.skycat-hero__logo-placeholder span {
+    color: var(--color-accent);
+}
+
+.skycat-hero h1 {
+    max-width: 900px;
+
+    margin: 20px auto 28px;
+
+    color: var(--color-text-primary);
+
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.skycat-hero h1 span,
+.skycat-section__heading h2 span,
+.skycat-section--closing h2 span {
+    color: var(--color-accent);
+}
+
+.skycat-hero p {
+    max-width: 680px;
+
+    margin: 0 auto 36px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.skycat__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 14px;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.skycat__back:hover {
+    color: var(--color-text-primary);
+
+    transform: translateX(-4px);
+}
+
+
+/* Sections */
+
+.skycat-section {
+    padding: 120px 0;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.skycat-section--muted {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.skycat-section__heading {
+    max-width: 720px;
+
+    margin-bottom: 70px;
+}
+
+.skycat-section__heading h2 {
+    margin: 18px 0 20px;
+
+    color: var(--color-text-primary);
+
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.05;
+}
+
+.skycat-section__heading p {
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Story */
+
+.skycat-story {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 90px;
+
+    max-width: 1000px;
+}
+
+.skycat-story__label {
+    color: var(--color-text-secondary);
+
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skycat-story__intro p {
+    margin: 18px 0 0;
+
+    color: var(--color-text-primary);
+
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.skycat-story__text {
+    max-width: 620px;
+}
+
+.skycat-story__text p {
+    margin: 0 0 22px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.skycat-story__text p:last-child {
+    margin-bottom: 0;
+}
+
+.skycat-story__text strong {
+    color: var(--color-text-primary);
+}
+
+
+/* Idea */
+
+.skycat-idea {
+    max-width: 820px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 60px;
+}
+
+.skycat-idea p {
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Team */
+
+.skycat-team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 70px;
+
+    max-width: 900px;
+}
+
+.skycat-member {
+    padding-top: 20px;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.skycat-member__number {
+    display: block;
+
+    margin-bottom: 28px;
+
+    color: var(--color-accent);
+
+    font-family: var(--font-mono);
+    font-size: 11px;
+}
+
+.skycat-member h3 {
+    margin: 0 0 8px;
+
+    color: var(--color-text-primary);
+
+    font-size: 28px;
+}
+
+.skycat-member__role {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--color-accent);
+
+    font-family: var(--font-mono);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.skycat-member p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Project */
+
+.skycat-section--project {
+    padding-bottom: 140px;
+}
+
+.skycat-project {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.skycat-project__image {
+    width: 100%;
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+
+    background: var(--color-surface);
+}
+
+.skycat-project__image-placeholder {
+    color: var(--color-text-secondary);
+
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.skycat-project__status {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #42e88b;
+
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skycat-project__content h3 {
+    margin: 0 0 18px;
+
+    color: var(--color-text-primary);
+
+    font-size: 32px;
+}
+
+.skycat-project__content > p {
+    margin: 0 0 26px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.skycat-project__technologies {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+.skycat-project__technologies span {
+    padding: 7px 10px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+
+    color: var(--color-text-secondary);
+
+    font-family: var(--font-mono);
+    font-size: 10px;
+}
+
+
+/* Buttons */
+
+.skycat__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 18px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+
+    color: var(--color-text-primary);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.skycat__button:hover {
+    color: var(--color-background);
+
+    background: var(--color-accent);
+
+    border-color: var(--color-accent);
+
+    transform: translateY(-2px);
+}
+
+.skycat__button span {
+    font-size: 18px;
+}
+
+.skycat__button--secondary {
+    background: transparent;
+}
+
+
+/* Closing */
+
+.skycat-section--closing {
+    padding: 130px 0;
+}
+
+.skycat-section--closing h2 {
+    max-width: 850px;
+
+    margin: 18px 0 25px;
+
+    color: var(--color-text-primary);
+
+    font-size: clamp(44px, 6vw, 72px);
+    line-height: 1.02;
+}
+
+.skycat-section--closing p {
+    max-width: 700px;
+
+    margin: 0 0 20px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.skycat__closing-actions {
+    margin-top: 35px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .skycat-page {
+        padding-top: 68px;
+    }
+
+    .skycat-hero {
+        padding: 90px 0 100px;
+    }
+
+    .skycat-hero h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
+
+    .skycat-section {
+        padding: 90px 0;
+    }
+
+    .skycat-story,
+    .skycat-idea,
+    .skycat-team,
+    .skycat-project {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .skycat-project__image {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .skycat__container {
+        width: min(100% - 24px, var(--container-width));
+    }
+
+    .skycat-hero h1 {
+        font-size: 40px;
+    }
+
+    .skycat-section__heading h2,
+    .skycat-section--closing h2 {
+        font-size: 40px;
+    }
+
+    .skycat-hero__logo-placeholder {
+        width: 100px;
+        height: 100px;
+    }
+}

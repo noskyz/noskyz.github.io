@@ -9,9 +9,21 @@ const projects = [
         description:
             "An open-world medieval action RPG developed in Unity, focused on realistic combat, exploration and an immersive medieval world.",
 
-        image: "/projects/rise-of-a-squire.jpg",
+        image: "/images/rise-of-a-squire/MainMenu.png",
+
+        gallery: [
+            "/images/rise-of-a-squire/MainMenu.png",
+            "/images/rise-of-a-squire/Fight1.png",
+            "/images/rise-of-a-squire/Fight2.png",
+            "/images/rise-of-a-squire/Pier.png",
+            "/images/rise-of-a-squire/Tabern.png",
+        ],
 
         technologies: ["Unity", "C#", "Blender", "FMOD"],
+
+        // Project links
+        prototypeUrl: "/downloads/DemoRiseOfASquire.rar",
+        repositoryUrl: "https://github.com/noskyz/RiseOfASquire",
 
         studio: "Independent Project",
         team: "Solo Development",
@@ -51,7 +63,7 @@ const projects = [
 
         development: {
             current:
-                "The project is still in development, with the main focus being the refinement of gameplay systems, combat, world building and overall presentation.",
+                "The project started as a university project and is now being continued independently, with the main focus being the refinement of gameplay systems, combat, world building and overall presentation.",
             future: [
                 "Expand the story and quest system",
                 "Improve visual quality",
@@ -72,9 +84,22 @@ const projects = [
         description:
             "A mobile application designed to help dog owners manage identification, health, well-being and important information about their animals.",
 
-        image: "/projects/saude-animal.jpg",
+        image: "/images/saude-animal/MainMenu.png",
+
+        gallery: [
+            "/images/saude-animal/MainMenu.png",
+            "/images/saude-animal/BoletinVacina.png",
+            "/images/saude-animal/Calendario.png",
+            "/images/saude-animal/ExemploMapas.png",
+            "/images/saude-animal/ListaAnimais.png",
+            "/images/saude-animal/Login.png",
+        ],
 
         technologies: ["Flutter", "Dart", "Firebase", "Firestore"],
+
+        // Project links
+        prototypeUrl: null,
+        repositoryUrl: "https://github.com/noskyz/Saude_Animal",
 
         studio: "Independent Project",
         team: "Solo Development",
@@ -115,7 +140,7 @@ const projects = [
 
         development: {
             current:
-                "The application was developed as an academic project and remains available as part of my portfolio development work.",
+                "The application was initially developed as an academic project between November and February and is now being continued as an independent project.",
             future: [
                 "Improve the application interface",
                 "Expand calendar functionality",
@@ -135,9 +160,22 @@ const projects = [
         description:
             "A psychological narrative game developed in Unity HDRP, following a father who survives a plane crash and begins uncovering fragments of his family's story.",
 
-        image: "/projects/echoes-of-the-forgotten.jpg",
+        image: "/images/echoes-of-the-forgotten/MainMenu.png",
+
+        gallery: [
+            "/images/echoes-of-the-forgotten/MainMenu.png",
+            "/images/echoes-of-the-forgotten/Spawn.png",
+            "/images/echoes-of-the-forgotten/Inventory.png",
+            "/images/echoes-of-the-forgotten/Inventory2.png",
+            "/images/echoes-of-the-forgotten/Clue2.png",
+            "/images/echoes-of-the-forgotten/Animation.png",
+        ],
 
         technologies: ["Unity HDRP", "C#", "Blender", "FMOD"],
+
+        // Project links
+        prototypeUrl: "/downloads/EchoesV5_Final.rar",
+        repositoryUrl: null,
 
         studio: "SkyCat",
         studioLink: "/skycat",

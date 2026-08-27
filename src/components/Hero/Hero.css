@@ -284,13 +284,14 @@
   letter-spacing: 0.08em;
 }
 
-.hero__image-placeholder small {
-  color: var(--color-text-secondary);
-  opacity: 0.55;
+.hero__image-placeholder img {
+    width: 100%;
+    height: 100%;
 
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  letter-spacing: 0;
+    object-fit: cover;
+    object-position: center 35%;
+
+    border-radius: calc(var(--radius-large) - 8px);
 }
 
 .hero__corner {

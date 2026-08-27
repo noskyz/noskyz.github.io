@@ -1,4 +1,5 @@
 import "./About.css";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -80,10 +81,10 @@ function About() {
               personal projects that continue to shape the way I build.
             </p>
 
-            <button type="button" className="about__button">
+            <Link to="/about" className="about__button">
               View my journey
               <span>→</span>
-            </button>
+            </Link>
           </div>
 
         </div>

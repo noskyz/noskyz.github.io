@@ -48,6 +48,15 @@ function Hero() {
             <a href="#contact" className="hero__button hero__button--secondary">
               Get in touch
             </a>
+
+            <a
+              href="/downloads/DavidSilva_CV.pdf"
+              className="hero__button hero__button--secondary"
+              download
+            >
+              Download CV
+              <span>↓</span>
+            </a>
           </div>
 
           <div className="hero__socials">
@@ -74,8 +83,10 @@ function Hero() {
         <div className="hero__visual fade-in">
           <div className="hero__image-frame">
             <div className="hero__image-placeholder">
-              <span>YOUR PHOTO</span>
-              <small>Professional portrait</small>
+              <img
+                src="/images/profile.jpeg"
+                alt="David"
+              />
             </div>
 
             <div className="hero__corner hero__corner--top" />

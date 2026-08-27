@@ -7,6 +7,7 @@ import ProjectCard from "../components/ProjectCard/ProjectCard";
 import About from "../components/About/About";
 import Currently from "../components/Currently/Currently";
 import Footer from "../components/Footer/Footer";
+import Contact from "../components/Contact/Contact";
 
 function Home() {
   const navigate = useNavigate();
@@ -64,6 +65,8 @@ function Home() {
       <About />
 
       <Currently />
+
+      <Contact />
 
       <Footer />
     </>
