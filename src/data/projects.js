@@ -22,7 +22,7 @@ const projects = [
         technologies: ["Unity", "C#", "Blender", "FMOD"],
 
         // Project links
-        prototypeUrl: "/downloads/DemoRiseOfASquire.rar",
+        prototypeUrl: "https://github.com/noskyz/noskyz.github.io/releases/latest/download/DemoRiseOfASquire.rar",
         repositoryUrl: "https://github.com/noskyz/RiseOfASquire",
 
         studio: "Independent Project",
@@ -174,7 +174,7 @@ const projects = [
         technologies: ["Unity HDRP", "C#", "Blender", "FMOD"],
 
         // Project links
-        prototypeUrl: "/downloads/EchoesV5_Final.rar",
+        prototypeUrl: "https://github.com/noskyz/noskyz.github.io/releases/latest/download/EchoesV5_Final.rar",
         repositoryUrl: null,
 
         studio: "SkyCat",
