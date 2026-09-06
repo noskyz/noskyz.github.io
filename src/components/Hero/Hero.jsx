@@ -1,5 +1,5 @@
 import "./Hero.css";
-import { trackCVDownload } from "../analytics/analytics";
+import { trackCVDownload } from "../../analytics/analytics";
 
 function Hero() {
   return (

@@ -1,6 +1,6 @@
 import "./About.css";
 import { Link } from "react-router-dom";
-import { trackJourneyView } from "../analytics/analytics";
+import { trackJourneyView } from "../../analytics/analytics";
 
 function About() {
   return (
