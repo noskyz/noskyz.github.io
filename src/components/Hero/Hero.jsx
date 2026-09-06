@@ -1,4 +1,5 @@
 import "./Hero.css";
+import { trackCVDownload } from "../analytics/analytics";
 
 function Hero() {
   return (
@@ -53,9 +54,9 @@ function Hero() {
               href="/downloads/DavidSilva_CV.pdf"
               className="hero__button hero__button--secondary"
               download
+              onClick={trackCVDownload}
             >
-              Download CV
-              <span>↓</span>
+              Download CV ↓
             </a>
           </div>
 
@@ -63,7 +64,8 @@ function Hero() {
             <a
               href="https://github.com/noskyz"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              onClick={() => trackGithubClick("hero")}
             >
               GitHub
             </a>
@@ -74,6 +76,7 @@ function Hero() {
               href="https://www.linkedin.com/in/ddavidsilva/"
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackLinkedinClick("hero")}
             >
               LinkedIn
             </a>

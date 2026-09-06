@@ -1,5 +1,6 @@
 import "./About.css";
 import { Link } from "react-router-dom";
+import { trackJourneyView } from "../analytics/analytics";
 
 function About() {
   return (
@@ -81,7 +82,7 @@ function About() {
               personal projects that continue to shape the way I build.
             </p>
 
-            <Link to="/about" className="about__button">
+            <Link to="/about" className="about__button" onClick={trackJourneyView}>
               View my journey
               <span>→</span>
             </Link>

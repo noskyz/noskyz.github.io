@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./ProjectCard.css";
+import { trackProjectOpen } from "../../analytics/analytics";
 
 function ProjectCard({ project, onClick }) {
     const navigate = useNavigate();
@@ -12,15 +13,20 @@ function ProjectCard({ project, onClick }) {
         }
     };
 
+    const handleCardClick = () => {
+        trackProjectOpen(project.title, project.category);
+        onClick();
+    };
+
     return (
         <article
             className="project-card"
-            onClick={onClick}
+            onClick={handleCardClick}
             role="button"
             tabIndex={0}
             onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
-                    onClick();
+                    handleCardClick();
                 }
             }}
         >

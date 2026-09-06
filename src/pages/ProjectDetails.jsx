@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import projects from "../data/projects";
+import {
+    trackPrototypeClick,
+    trackGithubClick,
+    trackSkyCatClick,
+    trackGalleryInteraction,
+} from "../analytics/analytics";
 
 function ProjectDetails() {
     const { projectId } = useParams();
@@ -15,14 +21,32 @@ function ProjectDetails() {
     const gallery = project?.gallery || [project?.image];
 
     const nextImage = () => {
-        setCurrentImage((current) =>
-            current === gallery.length - 1 ? 0 : current + 1
+        const nextIndex =
+            currentImage === gallery.length - 1
+                ? 0
+                : currentImage + 1;
+
+        setCurrentImage(nextIndex);
+
+        trackGalleryInteraction(
+            project.title,
+            "next",
+            getImageName(gallery[nextIndex])
         );
     };
 
     const previousImage = () => {
-        setCurrentImage((current) =>
-            current === 0 ? gallery.length - 1 : current - 1
+        const previousIndex =
+            currentImage === 0
+                ? gallery.length - 1
+                : currentImage - 1;
+
+        setCurrentImage(previousIndex);
+
+        trackGalleryInteraction(
+            project.title,
+            "previous",
+            getImageName(gallery[previousIndex])
         );
     };
 
@@ -145,7 +169,7 @@ function ProjectDetails() {
                     </p>
 
                 </section>
-                
+
 
                 {/* PROJECT ACTIONS */}
 
@@ -163,6 +187,7 @@ function ProjectDetails() {
                                     href={project.prototypeUrl}
                                     className="project-details__action project-details__action--primary"
                                     download
+                                    onClick={() => trackPrototypeClick(project.title)}
                                 >
                                     <span>
                                         {project.id === "saude-animal"
@@ -182,6 +207,7 @@ function ProjectDetails() {
                                     className="project-details__action"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={() => trackPrototypeClick(project.title)}
                                 >
                                     <span>View Repository</span>
 
@@ -280,9 +306,10 @@ function ProjectDetails() {
                             {project.studioLink ? (
                                 <button
                                     type="button"
-                                    onClick={() =>
-                                        navigate(project.studioLink)
-                                    }
+                                    onClick={() => {
+                                        trackSkyCatClick();
+                                        navigate(project.studioLink);
+                                    }}
                                 >
                                     {project.studio}
                                 </button>
